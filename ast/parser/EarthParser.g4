@@ -32,6 +32,7 @@ commandStmt:
 	| copyStmt
 	| saveStmt
 	| runStmt
+	| testStmt
 	| buildStmt
 	| workdirStmt
 	| userStmt
@@ -129,6 +130,8 @@ saveImage: SAVE_IMAGE stmtWords?;
 saveArtifact: SAVE_ARTIFACT stmtWords?;
 
 runStmt: RUN stmtWordsMaybeJSON?;
+
+testStmt: TEST stmtWordsMaybeJSON?;
 
 buildStmt: BUILD stmtWords?;
 

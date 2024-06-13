@@ -158,6 +158,9 @@ type EarthParserListener interface {
 	// EnterRunStmt is called when entering the runStmt production.
 	EnterRunStmt(c *RunStmtContext)
 
+	// EnterTestStmt is called when entering the testStmt production.
+	EnterTestStmt(c *TestStmtContext)
+
 	// EnterBuildStmt is called when entering the buildStmt production.
 	EnterBuildStmt(c *BuildStmtContext)
 
@@ -409,6 +412,9 @@ type EarthParserListener interface {
 
 	// ExitRunStmt is called when exiting the runStmt production.
 	ExitRunStmt(c *RunStmtContext)
+
+	// ExitTestStmt is called when exiting the testStmt production.
+	ExitTestStmt(c *TestStmtContext)
 
 	// ExitBuildStmt is called when exiting the buildStmt production.
 	ExitBuildStmt(c *BuildStmtContext)
