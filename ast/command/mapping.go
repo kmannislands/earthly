@@ -29,6 +29,7 @@ func init() {
 		OnBuildCmd:        OnBuild,
 		ProjectCmd:        Project,
 		RunCmd:            Run,
+		TestCmd:           Test,
 		SaveArtifactCmd:   SaveArtifact,
 		SaveImageCmd:      SaveImage,
 		SetCmd:            Set,

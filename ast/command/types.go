@@ -29,6 +29,7 @@ const (
 	OnBuildCmd                        // "ON BUILD"
 	ProjectCmd                        // "PROJECT"
 	RunCmd                            // "RUN"
+	TestCmd                           // "TEST"
 	SaveArtifactCmd                   // "SAVE ARTIFACT"
 	SaveImageCmd                      // "SAVE IMAGE"
 	SetCmd                            // "SET"

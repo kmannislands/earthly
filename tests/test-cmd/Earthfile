@@ -1,0 +1,5 @@
+VERSION 0.8
+
+unit-test:
+    FROM alpine:3.19
+    TEST echo "yo!" && false
