@@ -1,4 +1,4 @@
-VERSION 0.8
+VERSION --test 0.8
 
 unit-test:
     FROM alpine:3.19

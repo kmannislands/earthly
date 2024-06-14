@@ -42,6 +42,8 @@ type RunOpts struct {
 	RawOutput       bool     `long:"raw-output" description:"Do not prefix output with target. Print Raw"`
 }
 
+type TestOpts = RunOpts
+
 type FromOpts struct {
 	AllowPrivileged bool     `long:"allow-privileged" description:"Allow commands under remote targets to enable privileged mode"`
 	PassArgs        bool     `long:"pass-args" description:"Pass arguments to external targets"`

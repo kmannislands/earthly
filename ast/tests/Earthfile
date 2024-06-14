@@ -5,6 +5,7 @@ WORKDIR /test
 
 COPY ../..+earthly/earthly /usr/local/bin/earthly
 
+# TODO a mechanism to ensure that all declared tests match expected
 # all runs all tests
 all:
     BUILD +group1
@@ -59,7 +60,8 @@ group2:
         --TEST=with-docker \
         --TEST=with-docker-compose \
         --TEST=command \
-        --TEST=import
+        --TEST=import \
+        --TEST=test-basic
 
 group3:
     BUILD +test --INPUT_FROM_DIR=./ --INPUT_FROM_TARGET="" \
@@ -68,8 +70,7 @@ group3:
         --TEST=for \
         --TEST=empty-targets \
         --TEST=quotes \
-        --TEST=documentation \
-        --TEST=test-basic \
+        --TEST=documentation
 
 # update-all updates all the expected values of the tests
 update-all:

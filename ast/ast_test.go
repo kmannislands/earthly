@@ -640,6 +640,31 @@ test:
 				r.Contains(target.Recipe[1].Command.Args, `'echo "message"'`)
 			},
 		},
+		{
+			note: "TEST command is a valid command",
+			earthfile: `VERSION --test 0.8
+
+FROM alpine
+
+unit-test:
+  TEST go test`,
+			check: func(r *require.Assertions, s spec.Earthfile, err error) {
+				r.NoError(err)
+
+				r.Contains(s.Version.Args, "--test")
+
+				r.Len(s.Targets, 1)
+				target := s.Targets[0]
+				r.Len(target.Recipe, 1)
+
+				// Confirm that TEST was handled as a command
+				testCmd := target.Recipe[0].Command
+				r.Len(testCmd.Args, 2)
+				r.Contains(testCmd.Args, "go")
+				r.Contains(testCmd.Args, "test")
+				r.Equal("TEST", testCmd.Name)
+			},
+		},
 	}
 
 	for _, test := range tests {

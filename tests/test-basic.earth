@@ -1,4 +1,5 @@
-VERSION 0.8
+VERSION --test 0.8
+
 test:
     FROM alpine:3.18
     
