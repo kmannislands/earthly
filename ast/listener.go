@@ -271,6 +271,10 @@ func (l *listener) EnterRunStmt(c *parser.RunStmtContext) {
 	l.command.Name = "RUN"
 }
 
+func (l *listener) EnterTestStmt(c *parser.TestStmtContext) {
+	l.command.Name = "TEST"
+}
+
 func (l *listener) EnterSaveArtifact(c *parser.SaveArtifactContext) {
 	l.command.Name = "SAVE ARTIFACT"
 }
