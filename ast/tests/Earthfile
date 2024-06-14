@@ -68,7 +68,8 @@ group3:
         --TEST=for \
         --TEST=empty-targets \
         --TEST=quotes \
-        --TEST=documentation
+        --TEST=documentation \
+        --TEST=test-basic \
 
 # update-all updates all the expected values of the tests
 update-all:
