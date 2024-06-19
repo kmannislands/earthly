@@ -1,0 +1,47 @@
+{
+  "baseRecipe": null,
+  "targets": [
+    {
+      "name": "test",
+      "recipe": [
+        {
+          "command": {
+            "args": [
+              "alpine:3.18"
+            ],
+            "name": "FROM"
+          }
+        },
+        {
+          "command": {
+            "args": [
+              "echo",
+              "\"I'm a test\"",
+              ">>",
+              "junit.xml",
+              "&&",
+              "false"
+            ],
+            "name": "TEST"
+          }
+        },
+        {
+          "command": {
+            "args": [
+              "junit.xml",
+              "AS",
+              "LOCAL",
+              "junit.xml"
+            ],
+            "name": "SAVE ARTIFACT"
+          }
+        }
+      ]
+    }
+  ],
+  "version": {
+    "args": [
+      "0.8"
+    ]
+  }
+}

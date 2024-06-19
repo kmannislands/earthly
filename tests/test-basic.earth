@@ -1,0 +1,7 @@
+VERSION --test 0.8
+
+test:
+    FROM alpine:3.18
+    
+    TEST echo "I'm a test" >> junit.xml && false
+    SAVE ARTIFACT junit.xml AS LOCAL junit.xml

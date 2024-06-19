@@ -27,6 +27,7 @@ const (
 	OnBuild        = "ONBUILD"
 	Project        = "PROJECT"
 	Run            = "RUN"
+	Test           = "TEST"
 	SaveArtifact   = "SAVE ARTIFACT"
 	SaveImage      = "SAVE IMAGE"
 	Set            = "SET"

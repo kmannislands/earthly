@@ -321,6 +321,12 @@ func (s *BaseEarthParserListener) EnterRunStmt(ctx *RunStmtContext) {}
 // ExitRunStmt is called when production runStmt is exited.
 func (s *BaseEarthParserListener) ExitRunStmt(ctx *RunStmtContext) {}
 
+// EnterTestStmt is called when production testStmt is entered.
+func (s *BaseEarthParserListener) EnterTestStmt(ctx *TestStmtContext) {}
+
+// ExitTestStmt is called when production testStmt is exited.
+func (s *BaseEarthParserListener) ExitTestStmt(ctx *TestStmtContext) {}
+
 // EnterBuildStmt is called when production buildStmt is entered.
 func (s *BaseEarthParserListener) EnterBuildStmt(ctx *BuildStmtContext) {}
 
